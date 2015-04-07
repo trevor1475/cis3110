@@ -1,0 +1,16 @@
+<REPORT - Assignment 3 - Trevor Livingston 0833394 - March 27, 2015>
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+The holes program takes input from the file inputed in argv[1] from the terminal. It parses the information into a linkedlist  structure. Upon parse errors, the program frees the memory in the structs, and exits.
+
+On a successful parse, the program will run the simulator based on the the option the user choses in the menu; first fit, best fit, next fit, or worst fit. The user may also quit as an option in the menu. During the simulation, the data from the initial linked list is copied to a ready list, so it will not effect future simulations. The ready list is then distributed to a running list, which then goes back to the ready list once new processes need to be entered. The cycle repeats until each process has been used 3 times. 
+
+The program frees all the allocated memory during each simulation. Once the user decides to exit, the allocated memory from parsing is free'd, and the program ends.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Some of the assumptions I made:
+
+- Next fit loops around before it starts freeing memory
+- All processes start at 0 if there is no running process
